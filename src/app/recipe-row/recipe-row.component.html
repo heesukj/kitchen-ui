@@ -1,0 +1,43 @@
+<li *ngIf="recipe">
+  <!-- <div class="row">
+    <h3>{{recipe.title}}</h3>
+    <div class="float-right"><strong>Total time:</strong> {{recipe.totalTime}}</div>
+  </div> -->
+  <div class="row">
+    <div class="col-md-4">
+      <div>This is where we display the image {{recipe.imagePath}}</div>
+      <!-- uncomment line below when the images are ready -->
+      <!-- <img [src]="recipe.imagePath"> -->
+      <img width="300" src="http://www.freshnessgf.com/wp-content/uploads/2014/07/ribs-on-platter-940x400.jpg">
+    </div>
+    <div class="col-md-4">
+      <p><strong>{{recipe.title}}</strong></p>
+    </div>
+    <div class="col-md-4">
+      <p>{{recipe.level}}</p>
+    </div>
+    <!-- <div class="col-md-6">
+      <h4>Ingredients</h4>
+      <ul>
+        <li *ngFor="let ingredient of recipe.ingredients">{{ingredient}}</li>
+      </ul>
+    </div>
+    <div class="col-md-6">
+      <h4>Directions</h4>
+      <ul>
+        <li *ngFor="let direction of recipe.directions">{{direction}}</li>
+      </ul>
+    </div> -->
+
+  </div>
+
+  <!-- <div>id: {{recipe.id}}</div>
+  <div>title: {{recipe.title}}</div>
+  <div>category: {{recipe.category}}</div>
+  <div>cookTime: {{recipe.cookTime}}</div>
+  <div>directions: {{recipe.directions}}</div>
+  <div>imagePath: {{recipe.imagePath}}</div>
+  <div>ingredients: {{recipe.ingredients}}</div>
+  <div>koreanTitle: {{recipe.koreanTitle}}</div>
+  <div>prepTime: {{recipe.prepTime}}</div> -->
+</li>
