@@ -18,11 +18,30 @@ export class Recipe {
   cookTime: string;
   directions : string[];
   imagePath: string;
+  description: string[];
   ingredients: string[];
   koreanTitle: string;
+  koreanTitlePron: string;
   level:string;
   prepTime: string;
   title: string
   totalTime: string;
   yield: string;
+  caloriesPerServing: string;
 }
+
+/* private String title;
+    private String koreanTitle;
+    private String koreanTitlePron;
+    private String imagePath;
+    private List<String> description;
+    private String category;
+    private String totalTime;
+    private String prepTime;
+    private String cookTime;
+    private String yield;
+    private String level;
+    private String caloriesPerServing;
+    private List<String> ingredients;
+    private List<String> directions;
+    */

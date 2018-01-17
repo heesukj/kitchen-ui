@@ -1,1 +1,34 @@
 /* You can add global styles to this file, and also import other style files */
+.header-backgroud {
+  background-color: #e3f2fd
+}
+
+.food-image {
+  width: 52%;
+}
+
+/* .title-image {
+  border: 10px solid green;
+} */
+
+.flex-container {
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-flow: row wrap;
+  flex-flow: row wrap;
+  text-align: center;
+}
+
+.flex-container > * {
+    padding: 20px;
+    -webkit-flex: 1 100%;
+    flex: 1 100%;
+}
+
+.log-in-button {
+  margin-right: 7px;
+}
+
+.clickable {
+  cursor:pointer;
+}

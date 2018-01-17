@@ -1,0 +1,74 @@
+<div *ngIf="recipe">
+  <div class="row recipe-detail-title">
+    <div class="col-md-12">
+      <h3>{{recipe.title}}</h3>
+      <h5 class="title-margin">
+        {{recipe.koreanTitle}}
+        <span *ngIf='recipe.koreanTitlePron' class="title-margin">{{'(' + recipe.koreanTitlePron + ')'}}</span>
+        <a href="#" class="btn btn-danger btn-lg btn-text-size">
+          <i class="fa fa-download" aria-hidden="true"></i> Save
+        </a>
+        <a href="#" class="btn btn-success btn-lg btn-text-size">
+          <i class="fa fa-print" aria-hidden="true"></i> Print
+        </a>
+        <a href="#" class="btn btn-info btn-lg btn-text-size">
+          <i class="fa fa-share-alt" aria-hidden="true"></i> Share
+        </a>
+      </h5>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-12">
+      <div class="float-left img-border-detail details-image-div">
+          <!-- <img width="500px" src="/assets/images/spicy-rice-cake.png"> -->
+          <img width="500px" src="{{recipe.imagePath}}">
+      </div>
+      <div>
+        <dl>
+          <dt class="float-left time-label">Total Time: </dt>
+          <dd class="time-field">{{recipe.totalTime}} </dd>
+          <dt class="float-left time-label">Prep Time: </dt>
+          <dd class="time-field">{{recipe.prepTime}} </dd>
+          <dt class="float-left time-label">Cook Time: </dt>
+          <dd class="time-field">{{recipe.cookTime}} </dd>
+          <dt class="float-left time-label">Yield: </dt>
+          <dd class="time-field">{{recipe.yield}} </dd>
+          <dt class="float-left time-label">Level: </dt>
+          <dd class="time-field">{{recipe.level}} </dd>
+          <dt class="float-left time-label">Calories Per Serving: </dt>
+          <dd class="time-field">{{recipe.caloriesPerServing}} </dd>
+        </dl>
+      </div>
+    </div>
+  </div>
+
+  <!-- <ngb-rating [(rate)]="currentRate"></ngb-rating>
+  <hr>
+  <pre>Rate: <b>{{currentRate}}</b></pre> -->
+
+  <div class="row description-section">
+    <div class="col-md-8">
+      <p>{{recipe.description}}</p>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-6">
+      <h4>Ingredients</h4>
+      <div class="ingredients-text">
+        <ul class="list-unstyled">
+          <li class="ingredient" *ngFor="let ingredient of recipe.ingredients">
+            {{ingredient}}
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="col-md-6">
+      <div class="directions-text">
+        <h4>Directions</h4>
+        <p *ngFor="let direction of recipe.directions">
+          {{direction}}
+        </p>
+      </div>
+    </div>
+  </div>
+</div>

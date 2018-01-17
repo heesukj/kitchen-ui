@@ -1,20 +1,22 @@
 <li *ngIf="recipe">
-  <!-- <div class="row">
-    <h3>{{recipe.title}}</h3>
-    <div class="float-right"><strong>Total time:</strong> {{recipe.totalTime}}</div>
-  </div> -->
-  <div class="row">
-    <div class="col-md-4">
-      <div>This is where we display the image {{recipe.imagePath}}</div>
-      <!-- uncomment line below when the images are ready -->
-      <!-- <img [src]="recipe.imagePath"> -->
-      <img width="300" src="http://www.freshnessgf.com/wp-content/uploads/2014/07/ribs-on-platter-940x400.jpg">
+  <div class="row clickable recipe-row" (click)="goToRecipeDetail()">
+    <div class="col-md-4 img-border div-container">
+      <img width="90%" height="150px" src="{{ recipe.imagePath }}">
+      <!-- <img width="200" src="/assets/images/spicy-rice-cake.png"> -->
     </div>
     <div class="col-md-4">
-      <p><strong>{{recipe.title}}</strong></p>
+      <!-- <a routerLink="/recipe-detail/{{recipe.id}}"> -->
+      <!-- <div (click)="goToRecipeDetail()"> -->
+      <div class="recipe-text-margin col-margin">{{recipe.title}}</div>
+      <!-- </div> -->
+      <div class="col-margin">{{recipe.koreanTitle}}
+        <span *ngIf="recipe.koreanTitlePron">{{"(" +recipe.koreanTitlePron + ")"}}</span>
+      </div>
+      <div class="col-margin">{{"Calories per serving: " + recipe.caloriesPerServing}}</div>
     </div>
     <div class="col-md-4">
-      <p>{{recipe.level}}</p>
+      <div class="recipe-text-margin col-margin">{{recipe.category}}</div>
+      <div class="col-margin">{{recipe.level}}</div>
     </div>
     <!-- <div class="col-md-6">
       <h4>Ingredients</h4>

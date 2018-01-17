@@ -10,7 +10,10 @@ import { RecipeRowComponent } from './recipe-row/recipe-row.component';
 
 import { RecipeService } from './recipe.service';
 
-import { HttpClientModule } from '@angular/common/http'; 
+import { HttpClientModule } from '@angular/common/http';
+import { AppRoutingModule } from './/app-routing.module';
+import { RecipeDetailComponent } from './recipe-detail/recipe-detail.component';
+import { RecipeListPageComponent } from './recipe-list-page/recipe-list-page.component'; 
 
 @NgModule({
   declarations: [
@@ -19,11 +22,14 @@ import { HttpClientModule } from '@angular/common/http';
     PageTitleComponent,
     RecipeSearchComponent,
     RecipeRowComponent,
+    RecipeDetailComponent,
+    RecipeListPageComponent,
   ],
   imports: [
     BrowserModule,
     NgbModule.forRoot(),
-    HttpClientModule
+    HttpClientModule,
+    AppRoutingModule
   ],
   providers: [RecipeService],
   bootstrap: [AppComponent]

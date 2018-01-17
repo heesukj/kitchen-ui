@@ -5,6 +5,8 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { catchError, map, tap } from 'rxjs/operators'; // Error Handling
 import { RecipeResponse } from './recipe-response';
 
+import { Recipe } from './recipe';
+
 const httpOptions = {
   headers: new HttpHeaders({ 'Content-Type': 'application/json' })
 };
@@ -27,6 +29,24 @@ export class RecipeService {
       }),
       catchError(this.handleError('getRecipes', [] )));
   }
+
+  getRecipe(id: string): Observable<Recipe> {
+    console.log('id: ' + id);
+    const url = this.recipesUrl + '/' + id;
+    console.log('url', url);
+    return this.http.get<Recipe>(url).pipe(
+      tap(_ => this.log('fetched recipe id=${id}')),
+       catchError(this.handleError<Recipe>('getRecipe id=${id}'))
+     );
+  }
+
+  // /** PUT: update the recipe on the server */
+  //  updateRecipe(recipe: Recipe): Observable<any> {
+  //    return this.http.put(this.recipesUrl, recipe, httpOptions).pipe(  //http.put => three params: URL, data to update, options
+  //      tap(_ => this.log('updated hero id=${id}')),
+  //      catchError(this.handleError<any>('updateRecipe'))
+  //    );
+  //  }
 
   private log(message: string) {
     console.log('RecipeService: ', message);

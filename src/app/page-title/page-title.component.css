@@ -1,0 +1,28 @@
+.page-title-text {
+  /* margin-right: 20px */
+  text-transform: uppercase;
+  font-size: 27px;
+  font-weight: bold;
+  color: black;
+  text-shadow: 1px 1px 2px white, 0 0 25px darkgrey, 0 0 15px lightgrey;
+  /* font-style: oblique; */
+  /* font-family: "Times New Roman"; */
+  /* margin-left: : -10px; */
+  /* color: #173F03; */
+}
+.header-backgroud {
+    background-color: white;
+    margin-left: -11px;
+}
+
+.img-margin {
+  margin-right: 10px;
+  margin-bottom: 12px;
+}
+.container-fluid {
+    width: 100%;
+    padding-right: 0px;
+    padding-left: 5px;
+    margin-right: auto;
+    margin-left: auto;
+}

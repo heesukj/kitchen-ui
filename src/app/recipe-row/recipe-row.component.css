@@ -1,0 +1,23 @@
+.recipe-row {
+  margin-bottom: 20px;
+  margin-left: 4px;
+  background-color: none;
+  width: 98%;
+  /* height: 80%; */
+}
+
+.recipe-text-margin {
+  font-weight: 500;
+  margin-top: 38px;
+}
+.col-margin {
+  margin-left: 28px;
+}
+.img-border {
+  width: 50px;
+  text-align: center;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.div-container {
+  padding: 10px;
+}

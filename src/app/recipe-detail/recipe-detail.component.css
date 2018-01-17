@@ -1,0 +1,44 @@
+.recipe-detail-title {
+  margin: 20px -15px;
+}
+
+.details-image-div {
+  margin-right: 30px;
+  margin-bottom: 20px;
+}
+.img-border-detail {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+
+.description-section {
+  margin-bottom: 25px;
+}
+
+.time-field {
+  font-weight: normal;
+}
+
+.time-label {
+  margin-right: 10px;
+}
+
+.title-margin {
+  margin-right: 20px;
+}
+dd, dt {
+  line-height: 1.5;
+}
+
+.ingredient {
+  line-height: 2;
+}
+
+.btn-text-size {
+  font-size: 16px;
+  margin-right: 4.5px;
+  border: 3px solid transparent;
+  border-radius: 13px;
+  padding: 5px 10px;
+
+}
