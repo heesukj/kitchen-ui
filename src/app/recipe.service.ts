@@ -21,6 +21,7 @@ export class RecipeService {
   constructor(private http: HttpClient) { }
 
   getRecipes(): Observable<any> {
+    console.log('getRecipes called');
     return this.http.get<any>(this.recipesUrl).pipe(
       tap(recipes => this.log('fetched recipes')), // The RecipeService methods will tap into the flow of observable values and send a message (via log()) to the message area at the bottom of the page.
       map(response => {
@@ -28,6 +29,18 @@ export class RecipeService {
         return new RecipeResponse(response._embedded.recipes, response.page);
       }),
       catchError(this.handleError('getRecipes', [] )));
+  }
+
+  getRecipesByTitleContains(title: string): Observable<any> {
+    console.log('getRecipesByTitleContains, title: ' + title);
+    const url = this.recipesUrl + '/search/findByTitleIgnoreCaseContaining?title=' + title;
+    return this.http.get<any>(url).pipe(
+      tap(recipes => this.log('fetched recipes filtered by title ' + title)), // The RecipeService methods will tap into the flow of observable values and send a message (via log()) to the message area at the bottom of the page.
+      map(response => {
+        console.log('in map, reponse', response);
+        return new RecipeResponse(response._embedded.recipes, response.page);
+      }),
+      catchError(this.handleError('getRecipesByTitleContains', [] )));
   }
 
   getRecipe(id: string): Observable<Recipe> {
@@ -39,7 +52,6 @@ export class RecipeService {
        catchError(this.handleError<Recipe>('getRecipe id=${id}'))
      );
   }
-
   // /** PUT: update the recipe on the server */
   //  updateRecipe(recipe: Recipe): Observable<any> {
   //    return this.http.put(this.recipesUrl, recipe, httpOptions).pipe(  //http.put => three params: URL, data to update, options

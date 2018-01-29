@@ -1,8 +1,15 @@
 
-
-<div class="title-text-list">
-  <p>Recipes</p>
+<div class="container">
+  <div class="row title-text-list">
+    <h5><a class="navbar-brand" routerLink="/recipe-list-page"> <!--when click the "LIST RECIPES", route the page to  /recipe-list-page URL -->
+      <i class="fa fa-list" style="margin-right: 6px;margin-top: 30px;"aria-hidden="true"></i> List Recipes</a>
+    </h5>
+    <!-- <p>Recipes</p> -->
+  </div>
+  <div class="row">
+    <ul class="list-unstyled">  <!-- :add an HTML unordered list (<ul>)-->
+      <app-recipe-row *ngFor="let recipe of recipes" [recipe]="recipe"></app-recipe-row>
+    </ul>
+  </div>
 </div>
-<ul class="list-unstyled">  <!-- :add an HTML unordered list (<ul>)-->
-  <app-recipe-row *ngFor="let recipe of recipes" [recipe]="recipe"></app-recipe-row>
-</ul>
+<!--  -->

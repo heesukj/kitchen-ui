@@ -1,114 +1,96 @@
-<!-- <div class="row" style="background-color: lightgrey">
-  <div class="col-md-6">
-    <h2>Heesuk's Kitchen</h2>
-  </div>
-  <div class="col-md-6">
-    <div class="float-right">
-      <button type="button" class="btn btn-link">Sign In</button>
-    </div>
-  </div>
-</div> -->
-<!-- <div class="row">
-  <div class="col-md-6"
-    <div class="flex-container">
-      <!-- <header><h1><a class="navbar-brand" href="#">Heesuk's Kitchen</a></h1></header> -->
-      <!-- <header style="background-color:red"><h2>Heesuk's Kitchen</h2></header> -->
 
-    <!-- </div>
-  </div>
-</div> -->
-<!-- <div class="row"> -->
-
-  <nav class="navbar navbar-light header-backgroud">
-    <div class="container-fluid">
-      <div class="navbar-header">
-        <img width="40px" class="img-margin" src="/assets/images/logo.png">
-        <!-- <div class="page-title-text"> -->
-
-        <a class="navbar-brand page-title-text" href="#">Heesuk's Kitchen</a>
-        <!-- </div> -->
-      </div>
-      <div class="col-md-7">
-        <div class="float-right">
-          <a class="btn btn-success log-in-button" href="#logIn" role="button">Log In</a>
-          <a class="btn btn-primary" href="#signUp" role="button">Sign Up</a>
+<div class="container" style="height: 71px">
+    <nav class="navbar fixed-top navbar-expand-lg header-backgroud">
+      <!-- <div class="row">
+        <div class="container">
+          <div class="float-right">
+            <a class="btn btn-default log-in-button" href="#logIn" role="button">LOG IN</a>
+            <a class="btn btn-default" style="font-size: 14px;"href="#signUp" role="button">SIGN UP</a>
+          </div>
         </div>
+      </div> -->
 
-        <!-- <button type="button" class="btn btn-primary">Sign Up</button> -->
+      <div class="container-fluid">
+        <img width="30px" class="img-margin" src="/assets/images/logo-1.png">
+        <a class="navbar-brand" href="#"></a>
+        <a class="navbar-brand page-title-text" style="color:#e13b2b;"href="#"><strong>Heesuk's Kitchen</strong></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse justify-center-center" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto" >
+            <li class="nav-item active" >
+              <a class="nav-link" style="color:#747574;" href="#">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" style="color:#747574;" href="#">About</a>
+            </li>
+
+          <!-- Dropdown menu -->
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="recipe-list-page" style="color:#747574;" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Recipes</a>
+                <!-- <div class="dropdown-menu">
+                  <a class="dropdown-item" href="recipe-list-page">All Recipes</a>
+                  <a class="dropdown-item" href="recipe-list-page">Categories</a>
+                    <div class="dropdown-menu">
+                      <button class="dropdown-item">Rice 밥</button>
+                      <button class="dropdown-item">Noodle 국수</button>
+                      <button class="dropdown-item">Soup 국</button>
+                      <button class="dropdown-item">Stew 찌개</button>
+                      <button class="dropdown-item">BBQ 바베큐</button>
+                      <button class="dropdown-item">Steamed 찜</button>
+                      <button class="dropdown-item">Kimchee 김치</button>
+                      <button class="dropdown-item">Pancake 전</button>
+                      <button class="dropdown-item">Stir-fry 볶음요리</button>
+                      <button class="dropdown-item">Fried 튀김요리</button>
+                      <button class="dropdown-item">Dumplings 만두</button>
+                      <button class="dropdown-item">Side Dish 반찬</button>
+                      <button class="dropdown-item">Dessert 후식</button>
+                      <button class="dropdown-item">Snack 간식</button>
+                    </div>
+                </div> -->
+
+            </li>
+          </ul>
+<!-- later -->
+            <!-- <li class="nav-item">
+              <div class="d-inline-block" ngbDropdown #myDrop="ngbDropdown">
+                <a class="btn btn-default button-style" style="color:#747574;" id="dropdownManual" ngbDropdownToggle>Recipes</a>
+                  <div ngbDropdownMenu aria-labelledby="dropdownManual">
+                    <button class="dropdown-item">Rice 밥</button>
+                    <button class="dropdown-item">Noodle 국수</button>
+                    <button class="dropdown-item">Soup 국</button>
+                    <button class="dropdown-item">Stew 찌개</button>
+                    <button class="dropdown-item">BBQ 바베큐</button>
+                    <button class="dropdown-item">Steamed 찜</button>
+                    <button class="dropdown-item">Kimchee 김치</button>
+                    <button class="dropdown-item">Pancake 전</button>
+                    <button class="dropdown-item">Stir-fry 볶음요리</button>
+                    <button class="dropdown-item">Fried 튀김요리</button>
+                    <button class="dropdown-item">Dumplings 만두</button>
+                    <button class="dropdown-item">Side Dish 반찬</button>
+                    <button class="dropdown-item">Dessert 후식</button>
+                    <button class="dropdown-item">Snack 간식</button>
+                  </div>
+              </div>
+            </li> -->
+
+
+          <!-- Search bar -->
+          <div class="form-inline my-2 my-lg-0">
+            <input class="form-control mr-sm-2"
+                   type="search" size="40"
+                   #searchInput
+                   placeholder="Search Recipes"
+                   aria-label="Search">
+            <button class="btn btn-success my-2 my-sm-0"
+                    style="font-size: 12pt;color:white;"
+                    (click)="onSearchClick(searchInput.value)"
+                    role="button">
+              <i class="fa fa-search icon-margin" aria-hidden="true"></i>Search</button>
+          </div>
+        </div>
       </div>
-    </div>
-  </nav>
-<!-- </div> -->
-
-<nav class="navbar navbar-light header-backgroud">
-  <div class="d-inline-block" ngbDropdown #myDrop="ngbDropdown">
-
-    <button class="btn btn-outline-success" (click)="$event.stopPropagation(); myDrop.open();">Home</button>
-    <div class="btn-group" ngbDropdown role="group" aria-label="Button group with nested dropdown">
-      <button class="btn btn-outline-primary" id="dropdownManual" ngbDropdownToggle>Categories</button>
-      <div ngbDropdownMenu aria-labelledby="dropdownManual">
-        <button class="dropdown-item" href="rice.html">Rice 밥</button>
-        <button class="dropdown-item">Noodle 국수</button>
-        <button class="dropdown-item">Soup 국</button>
-        <button class="dropdown-item">Stew 찌개</button>
-        <button class="dropdown-item">BBQ 바베큐</button>
-        <button class="dropdown-item">Steamed 찜</button>
-        <button class="dropdown-item">Kimchee 김치</button>
-        <button class="dropdown-item">Pancake 전</button>
-        <button class="dropdown-item">Stir-fry 볶음요리</button>
-        <button class="dropdown-item">Fried 튀김요리</button>
-        <button class="dropdown-item">Dumplings 만두</button>
-        <button class="dropdown-item">Side Dish 반찬</button>
-        <button class="dropdown-item">Dessert 후식</button>
-        <button class="dropdown-item">Snack 간식</button>
-      </div>
-    </div>
-    <button class="btn btn-outline-danger" (click)="$event.stopPropagation(); myDrop.close();">About</button>
-    <button class="btn btn-outline-warning" (click)="$event.stopPropagation(); myDrop.open();">Contact</button>
-  </div>
-
-  <form class="form-inline">
-    <input class="form-control mr-sm-2" type="search" size=40 placeholder="Search Recipes" aria-label="Search">
-    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-  </form>
-</nav>
-
-
-
-
-<!-- <div class="row">
-  <nav class="navbar navbar-expand-lg navbar-light bg-light"> -->
-
-
-<!-- <div>
-  <ngb-carousel>
-    <ng-template ngbSlide>
-      <!-- <img width="500"  style="width: 500px" src="https://i.hungrygowhere.com/business/32/71/12/00/i-m-kim-korean-bbq-concept-shot-2_800x0_crop_800x800_e3a9b7020f.jpg" alt="Random first slide">
-      <img class="food-image" src="https://i.hungrygowhere.com/business/32/71/12/00/i-m-kim-korean-bbq-concept-shot-2_800x0_crop_800x800_e3a9b7020f.jpg" alt="Random first slide">
-      <div class="carousel-caption">
-        <h3>Korean BBQ (갈비구이)</h3>
-        <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
-      </div>
-    </ng-template>
-    <ng-template ngbSlide>
-      <img class="food-image" src="http://finedininglovers.cdn.crosscast-system.com/BlogPost/l_13074_bibimbap.jpg" alt="Random second slide">
-      <div class="carousel-caption">
-        <h3>BiBimBap (비빔밥)</h3>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-      </div>
-    </ng-template>
-    <ng-template ngbSlide>
-      <img class="food-image title-image" src="https://i.pinimg.com/736x/37/58/5c/37585c84893a170c39c1b79128049838--korean-rice-korean-food.jpg" alt="Random third slide">
-      <div class="carousel-caption">
-        <h3>KimBap (김밥)</h3>
-        <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
-      </div>
-    </ng-template>
-  </ngb-carousel>
-</div> -->
-<!-- <div>
-  <ngb-rating [(rate)]="currentRate"></ngb-rating>
-  <hr>
-  <!-- <pre style="color:blue;">Rate: <b>{{currentRate}}</b></pre>
-  <!-- <ngb-rating [rate]=""></ngb-rating><p style="color:red;">Please rate us.</p>
-</div> -->
+    </nav>
+</div>

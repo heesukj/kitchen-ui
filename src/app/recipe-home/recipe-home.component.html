@@ -1,0 +1,173 @@
+<!--Recipe of the Day -->
+<div clss="featured">
+  <div class="container">
+    <div class="row clickable justify-center-center" (click)="goToRecipeDetail('5a46934199269aadec1d11f2')">
+      <div class="col-lg-12"style="margin-top: 80px;margin-bottom: 30px;" >
+        <!-- <h5 style="text-align:center;color:grey;"><i class="fa fa-camera-retro"></i> Recipe of the Day</h5> -->
+        <h3 class="text-style">Recipe of the Day</h3>
+      </div>
+      <div class="row">
+        <div class="col-md-8 offset-md-2">
+          <div class="box grid recipes" style="padding-bottom:32px;">
+            <div class="in" >
+              <i class="fa fa-heart" style="margin-right:3px;"aria-hidden="true"></i>  Korean Beef Short Ribs BBQ
+            </div>
+            <img class="img" src="assets/images/bbq1.png" alt>
+            <div class="text-style"><h5>Galbi<span style="margin-left:10px;">갈비</span></h5></div>
+            <!-- <div style="margin-left:15px;margin-top:10px;"><strong>{{recipe.koreanTitle}}</strong><span style="margin-left:10px;">{{recipe.koreanTitlePron}}</span></div> -->
+            <div style="padding: 0px 80px;">
+              <p style="text-align:center;color:#737272;">Korean barbecue — tabletop marinated grilled meats with loads of complimentary banchans, or side dishes — is a one-of-a-kind, sizzling experience perfect for rowdy groups and dates alike.</p>
+              <!-- ref="#">{{"Calories per serving: " + recipe.caloriesPerServing}}</a> -->
+            </div>
+            <div class="tag">
+              <a>BBQ</a>
+              <a>Intermediate</a>
+              <a>Calories per serving: 479</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- TOP menus -->
+<div class="top">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-4">
+        <h5 style="text-align:left;margin-top:5px">
+          <i class="fa fa fa-list" style="margin-right: 6px;"aria-hidden="true"></i> Top Breakfast Recipes
+        </h5>
+        <div class="box clearfix clickable" (click)="goToRecipeDetail('5a693d40c2e33ffa6b6a7e2d')">
+          <img src="/assets/images/been-sprout-soup.png" alt>
+          <p style="font-size: 19px;color:#222222;margin-bottom:5px;">Bean Sprout Soup</p>
+          <p>콩나물국</p>
+          <p>Kong-na-mul-guk</p>
+        </div>
+      </div>
+      <div class="col-lg-4">
+        <h5 style="text-align:left;margin-top:5px">
+          <i class="fa fa fa-list" style="margin-right: 6px;"aria-hidden="true"></i> Top Lunch Recipes
+        </h5>
+        <div class="box clearfix clickable" (click)="goToRecipeDetail('5a6962a7c2e33ffa6b6a7e2e')">
+          <img src="/assets/images/bibimbap1.png" alt>
+          <p style="font-size: 19px;color:#222222;margin-bottom:5px;">Bibimbap</p>
+          <p>비빔밥</p>
+          <p>Bi-bim-bap</p>
+        </div>
+      </div>
+      <div class="col-lg-4">
+        <h5 style="text-align:left;margin-top:5px">
+          <i class="fa fa fa-list" style="margin-right: 6px;"aria-hidden="true"></i> Top Dinner Recipes
+        </h5>
+        <div class="box clearfix clickable" (click)="goToRecipeDetail('5a696af4c2e33ffa6b6a7e2f')">
+          <img src="/assets/images/jaeuokbokkm.png" alt>
+          <p style="font-size: 19px;color:#222222;margin-bottom:5px;">Stir-Fried Spicy Pork</p>
+          <p>제육볶음</p>
+          <p>Jae-yuk-bok-keum</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!--Popular Recipes -->
+<div class="list">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12 title-text-list">
+        <h5><i class="fa fa-cutlery" style="color:grey;margin-right:7px;" aria-hidden="true"></i> Popular Recipes</h5>
+      </div>
+      <div class="col-lg-4 clickable" (click)="goToRecipeDetail('5a697105c2e33ffa6b6a7e30')">
+        <div class="box grid recipes">
+          <div class="in">
+            <i class="fa fa-star" style="margin-right:3px;"aria-hidden="true"></i>  Japchae 잡채
+          </div>
+          <img width="100%" height="210"style="margin-bottom:0;background-color:#F7FCFC;padding:0px 0px;" src="/assets/images/japchae.png" alt>
+          <div style="padding:20px;">
+            <p>Japchae is a sweet and savory dish of stir-fried glass noodles and vegetables that is popular in Korean cuisine.</p>
+          </div>
+          <div class="tag" style="padding-bottom:20px;">
+            <a style="margin-right:5px">Noodle</a>
+            <a style="margin-right:5px">Intermediate</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 clickable" (click)="goToRecipeDetail('5a6a129bc2e33ffa6b6a7e32')">
+        <div class="box grid recipes">
+          <div class="in">
+            <i class="fa fa-star" style="margin-right:3px;"aria-hidden="true"></i>  Haemul Pajeon 해물파전
+          </div>
+          <img width="100%" height="210"style="margin-bottom:0;background-color:#F7FCFC;padding:0px 0px;" src="/assets/images/pajeon.png" alt>
+          <div style="padding:20px;">
+            <p>Pajeon is a variety of pan-fried jeon with scallion as its prominent ingredient, as pa (파) means scallion.</p>
+          </div>
+          <div class="tag" style="padding-bottom:20px;">
+            <a style="margin-right:5px">Pancake</a>
+            <a style="margin-right:5px">Intermediate</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 clickable" (click)="goToRecipeDetail('5a6a2c00c2e33ffa6b6a7e33')">
+        <div class="box grid recipes">
+          <div class="in">
+            <i class="fa fa-star" style="margin-right:3px;"aria-hidden="true"></i>  Bulgogi 불고기
+          </div>
+          <img width="100%" height="210"style="margin-bottom:0;background-color:#F7FCFC;padding:0px 0px;" src="/assets/images/bulgogi.png" alt>
+          <div style="padding:20px;">
+            <p>Bulgogi from Korean bul-gogi, is a gui made of thin, marinated slices of beef or pork grilled on a barbecue or on a stove.</p>
+          </div>
+          <div class="tag" style="padding-bottom:20px;">
+            <a style="margin-right:5px">BBQ</a>
+            <a style="margin-right:5px">Intermediate</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Korean Cuisine -->
+<div class="list">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12 title-text-list">
+        <h5><i class="fa fa-info-circle" style="color:grey;margin-right:7px;" aria-hidden="true"></i> Korean Cuisine</h5>
+      </div>
+      <div class="col-lg-4 clickable" (click)="goToRecipeDetail()">
+        <div class="box grid recipes">
+          <div class="in">
+            <i class="fa fa-cogs" style="margin-right:3px;"aria-hidden="true"></i>  Ingredients
+          </div>
+          <img width="100%" height="210"style="margin-bottom:0;background-color:#F7FCFC;padding:0px 0px;" src="/assets/images/ingredients.png" alt>
+          <div style="padding:20px;">
+            <p><strong>Over 25 essential Korean cooking ingredients: </strong>Rice & Noodles, Vegetables, Fish & Seafood, Shellfish, Meat, Condiments, Spices, etc </p>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 clickable" (click)="goToRecipeDetail()">
+        <div class="box grid recipes">
+          <div class="in">
+            <i class="fa fa-heart" style="margin-right:3px;"aria-hidden="true"></i>  Tastes
+          </div>
+          <img width="100%" height="210"style="margin-bottom:0;background-color:#F7FCFC;padding:0px 0px;" src="/assets/images/daily-meal.png" alt>
+          <div style="padding:20px;">
+            <p><strong>Traditional Korean meals </strong>are noted for the number of side dishes that accompany steam-cooked short-grain rice and Kimchi nearly every meal.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 clickable" (click)="goToRecipeDetail()">
+        <div class="box grid recipes">
+          <div class="in">
+            <i class="fa fa-history" style="margin-right:3px;"aria-hidden="true"></i>  Preparation & Cooking Methods
+          </div>
+          <img width="100%" height="210"style="margin-bottom:0;background-color:#F7FCFC;padding:0px 0px;" src="/assets/images/cooking-method.png" alt>
+          <div style="padding:20px;">
+            <p><strong>Over 10 essential Korean cooking methods: </strong>Pickled, Stewed, Steamed or Braised, Grilled, Pan-fried, Stir-fried, Boiled, etc </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

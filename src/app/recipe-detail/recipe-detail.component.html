@@ -1,74 +1,82 @@
+<!-- Recipe title -->
+<div *ngIf="!recipe" style="height: 1000px">
+    Loading....
+</div>
 <div *ngIf="recipe">
-  <div class="row recipe-detail-title">
-    <div class="col-md-12">
-      <h3>{{recipe.title}}</h3>
-      <h5 class="title-margin">
-        {{recipe.koreanTitle}}
-        <span *ngIf='recipe.koreanTitlePron' class="title-margin">{{'(' + recipe.koreanTitlePron + ')'}}</span>
-        <a href="#" class="btn btn-danger btn-lg btn-text-size">
-          <i class="fa fa-download" aria-hidden="true"></i> Save
-        </a>
-        <a href="#" class="btn btn-success btn-lg btn-text-size">
-          <i class="fa fa-print" aria-hidden="true"></i> Print
-        </a>
-        <a href="#" class="btn btn-info btn-lg btn-text-size">
-          <i class="fa fa-share-alt" aria-hidden="true"></i> Share
-        </a>
-      </h5>
-    </div>
-  </div>
-  <div class="row">
-    <div class="col-md-12">
-      <div class="float-left img-border-detail details-image-div">
-          <!-- <img width="500px" src="/assets/images/spicy-rice-cake.png"> -->
-          <img width="500px" src="{{recipe.imagePath}}">
+  <div class="recipe-detail">
+    <!-- <div class="container" -->
+      <div class="row justify-content-center">
+        <div class="col-lg-12 title-font">
+          <h6 class="kortitle">{{recipe.koreanTitle}}
+            <span *ngIf='recipe.koreanTitlePron' class="kortitle">{{'(' + recipe.koreanTitlePron + ') '}}</span>
+          </h6>
+          <h2 style="margin-bottom:10px;">{{recipe.title}}</h2>
+          <a href="#" class="btn btn-default btn-text-size">
+            <i class="fa fa-download" aria-hidden="true"></i>
+          </a>
+          <a href="#" class="btn btn-default btn-text-size">
+            <i class="fa fa-print" aria-hidden="true"></i>
+          </a>
+          <a href="#" class="btn btn-default btn-text-size">
+            <i class="fa fa-share-alt" aria-hidden="true"></i>
+          </a>
+          <a href="#" class="btn btn-default btn-text-size">
+            <i class="fa fa-thumbs-up" aria-hidden="true"></i>
+          </a>
+        </div>
       </div>
-      <div>
-        <dl>
-          <dt class="float-left time-label">Total Time: </dt>
-          <dd class="time-field">{{recipe.totalTime}} </dd>
-          <dt class="float-left time-label">Prep Time: </dt>
-          <dd class="time-field">{{recipe.prepTime}} </dd>
-          <dt class="float-left time-label">Cook Time: </dt>
-          <dd class="time-field">{{recipe.cookTime}} </dd>
-          <dt class="float-left time-label">Yield: </dt>
-          <dd class="time-field">{{recipe.yield}} </dd>
-          <dt class="float-left time-label">Level: </dt>
-          <dd class="time-field">{{recipe.level}} </dd>
-          <dt class="float-left time-label">Calories Per Serving: </dt>
-          <dd class="time-field">{{recipe.caloriesPerServing}} </dd>
-        </dl>
-      </div>
-    </div>
-  </div>
 
+  <!-- Image with time  -->
+      <div class="col-md-8 offset-md-2">
+        <img src="{{recipe.imagePath}}" alt>
+        <div class="info">
+          <div class="row">
+            <div class="col-md-6">
+              <p><i class="fa fa-clock-o" style="margin-bottom:5px;font-size:16px;margin-right:5px;"aria-hidden="true"></i>Total Time: <strong>{{recipe.totalTime}}</strong></p>
+              <p><i class="fa fa-clock-o" style="margin-bottom:5px;font-size:16px;margin-right:5px;"aria-hidden="true"></i>Prep Time: <strong>{{recipe.prepTime}}</strong></p>
+              <p><i class="fa fa-clock-o" style="font-size:16px;margin-right:5px;"aria-hidden="true"></i>Cook Time: <strong>{{recipe.cookTime}}</strong></p>
+            </div>
+            <div class="col-md-6">
+              <p><i class="fa fa-users" style="margin-bottom:5px;font-size:16px;margin-right:5px;"aria-hidden="true"></i>Yield: <strong>{{recipe.yield}}</strong></p>
+              <p><i class="fa fa-hand-pointer-o" style="margin-bottom:5px;font-size:16px;margin-right:5px;"aria-hidden="true"></i>Level: <strong>{{recipe.level}}</strong></p>
+              <p><i class="fa fa-check-square-o" style="font-size:16px;margin-right:5px;"aria-hidden="true"></i>Calories Per Serving: <strong>{{recipe.caloriesPerServing}}</strong></p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-8 offset-lg-2">
+        <p  style="margin-bottom:50px;">{{recipe.description}}</p>
+        <div class="row">
+          <div class="col-lg-6">
+            <h4 style="margin-bottom:20px;font-size:17px">Ingredients</h4>
+            <div>
+              <ul class="ingredients">
+                <li *ngFor="let ingredient of recipe.ingredients">
+                  {{ingredient}}
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <h4 style="margin-bottom:20px;font-size:17px">Directions</h4>
+            <div>
+              <ul class="directions">
+                <li *ngFor="let direction of recipe.directions">
+                  {{direction}}
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
   <!-- <ngb-rating [(rate)]="currentRate"></ngb-rating>
   <hr>
-  <pre>Rate: <b>{{currentRate}}</b></pre> -->
+  <pre>Rate: <b>{{currentRate}}</b></pre>
 
-  <div class="row description-section">
-    <div class="col-md-8">
-      <p>{{recipe.description}}</p>
-    </div>
-  </div>
-  <div class="row">
-    <div class="col-md-6">
-      <h4>Ingredients</h4>
-      <div class="ingredients-text">
-        <ul class="list-unstyled">
-          <li class="ingredient" *ngFor="let ingredient of recipe.ingredients">
-            {{ingredient}}
-          </li>
-        </ul>
-      </div>
-    </div>
-    <div class="col-md-6">
-      <div class="directions-text">
-        <h4>Directions</h4>
-        <p *ngFor="let direction of recipe.directions">
-          {{direction}}
-        </p>
-      </div>
-    </div>
-  </div>
-</div>
+
+
+
+
+<!--LOGIN form  -->

@@ -13,7 +13,10 @@ import { RecipeService } from './recipe.service';
 import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './/app-routing.module';
 import { RecipeDetailComponent } from './recipe-detail/recipe-detail.component';
-import { RecipeListPageComponent } from './recipe-list-page/recipe-list-page.component'; 
+import { RecipeListPageComponent } from './recipe-list-page/recipe-list-page.component';
+// import { LogInFormComponent } from './log-in-form/log-in-form.component';
+import { RecipeHomeComponent } from './recipe-home/recipe-home.component';
+import { FooterComponent } from './footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -24,6 +27,9 @@ import { RecipeListPageComponent } from './recipe-list-page/recipe-list-page.com
     RecipeRowComponent,
     RecipeDetailComponent,
     RecipeListPageComponent,
+    // LogInFormComponent,
+    RecipeHomeComponent,
+    FooterComponent,
   ],
   imports: [
     BrowserModule,

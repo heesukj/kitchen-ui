@@ -1,23 +1,64 @@
-.page-title-text {
-  /* margin-right: 20px */
+.icon-margin {
+  margin-right: 5px;
+}
+.dropdown {
+  position: relative;
+}
+.button-style {
   text-transform: uppercase;
-  font-size: 27px;
-  font-weight: bold;
+  font-size: 15px;
+  /* font-weight: bold; */
+  /* color: white; */
+}
+
+.home-text {
+  color: red;
+}
+.page-title-text {
+  font-family: 'Herculanum';
+  /* text-transform: capitalize; */
+  padding-right: 40px;
+  padding-right: 10px;
+  /* margin-top: 5px; */
+  font-size: 30px;
+  font-weight: 2000px;
   color: black;
-  text-shadow: 1px 1px 2px white, 0 0 25px darkgrey, 0 0 15px lightgrey;
-  /* font-style: oblique; */
-  /* font-family: "Times New Roman"; */
-  /* margin-left: : -10px; */
-  /* color: #173F03; */
+  text-shadow: 1px 10px 2px whitesmoke, 0 10 25px darkgrey, 0 0 15px light grey;
+
 }
 .header-backgroud {
-    background-color: white;
-    margin-left: -11px;
+  background-color: white;
+  letter-spacing: 0.06rem;
+  margin-left: -11px;
+  color: whitesmoke;
+  padding: 10px 35px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5), 0 6px 20px 0;
+}
+
+.log-in-button {
+  margin-right: 7px;
+  font-size: 14px;
+}
+
+/* .static {
+  position: static;
+} */
+
+.fixed {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  width: 200px;
+  background-color: white;
 }
 
 .img-margin {
+  /* margin-right: px; */
+  margin-left: 10px;
   margin-right: 10px;
   margin-bottom: 12px;
+  margin-top: 12px;
+
 }
 .container-fluid {
     width: 100%;
@@ -26,3 +67,34 @@
     margin-right: auto;
     margin-left: auto;
 }
+
+a {
+    color: lightgrey;
+    text-decoration: none;
+    background-color: transparent;
+  }
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    text-transform: uppercase;
+    font-size: 15px;
+    /* background-color: #333; */
+}
+
+li {
+    float: left;
+}
+
+/* li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li a:hover {
+  background-color: black;
+}*/

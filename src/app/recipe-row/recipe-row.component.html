@@ -1,15 +1,76 @@
 <li *ngIf="recipe">
+  <div class="list">
+    <div class="row clickable" (click)="goToRecipeDetail()">
+      <div class="col-lg-12">
+        <!-- <h5><i class="fa fa-cutlery" aria-hidden="true"></i> List Recipes</h5> -->
+        <div class="box list recipes">
+          <div class="in">
+            <i class="fa fa-heart" style="margin-right:3px;letter-spacing:.1rem;"aria-hidden="true"></i>  {{recipe.title}}
+          </div>
+          <div class="row">
+            <div class="col-sm-3">
+              <img class="img-border" width="180" height="100" src="{{ recipe.imagePath }}" alt>
+            </div>
+            <div class="col-sm-9">
+              <div style="margin-left:15px;margin-top:10px;letter-spacing:.07rem;"><strong>{{recipe.koreanTitle}}</strong><span style="margin-left:10px;">{{recipe.koreanTitlePron}}</span></div>
+
+              <!-- <p>{{recipe.description}}</p> -->
+              <div class="tag" style="margin-top:20px;">
+                <a>{{recipe.category}}</a>
+                <a>{{recipe.level}}</a>
+                <a>{{"Calories per serving: " + recipe.caloriesPerServing}}</a>
+              </div>
+            </div>
+        </div>
+       </div>
+      </div>
+    </div>
+  </div>
+</li>
+
+
+
+
+
+        <!-- <div class="col-md-4 img-border div-container">
+          <img width="90%" height="150px" src="{{ recipe.imagePath }}">
+          </div>
+        <div class="col-md-4">
+          <div class="recipe-text-margin col-margin">{{recipe.title}}</div>
+          <div class="col-margin">{{recipe.koreanTitle}}
+            <span *ngIf="recipe.koreanTitlePron">{{"(" +recipe.koreanTitlePron + ")"}}</span>
+          </div>
+          <div class="col-margin">{{"Calories per serving: " + recipe.caloriesPerServing}}</div>
+        </div>
+        <div class="col-md-4">
+          <div class="recipe-text-margin col-margin">{{recipe.category}}</div>
+          <div class="col-margin">{{recipe.level}}</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</li> -->
+
+
+
+
+
+
+
+
+<!--ORIGINAL  -->
+<!-- <li *ngIf="recipe">
   <div class="row clickable recipe-row" (click)="goToRecipeDetail()">
     <div class="col-md-4 img-border div-container">
-      <img width="90%" height="150px" src="{{ recipe.imagePath }}">
+      <img width="90%" height="150px" src="{{ recipe.imagePath }}"> -->
       <!-- <img width="200" src="/assets/images/spicy-rice-cake.png"> -->
-    </div>
-    <div class="col-md-4">
+    <!-- </div>
+    <div class="col-md-4"> -->
       <!-- <a routerLink="/recipe-detail/{{recipe.id}}"> -->
       <!-- <div (click)="goToRecipeDetail()"> -->
-      <div class="recipe-text-margin col-margin">{{recipe.title}}</div>
+      <!-- <div class="recipe-text-margin col-margin">{{recipe.title}}</div> -->
       <!-- </div> -->
-      <div class="col-margin">{{recipe.koreanTitle}}
+      <!-- <div class="col-margin">{{recipe.koreanTitle}}
         <span *ngIf="recipe.koreanTitlePron">{{"(" +recipe.koreanTitlePron + ")"}}</span>
       </div>
       <div class="col-margin">{{"Calories per serving: " + recipe.caloriesPerServing}}</div>
@@ -18,28 +79,5 @@
       <div class="recipe-text-margin col-margin">{{recipe.category}}</div>
       <div class="col-margin">{{recipe.level}}</div>
     </div>
-    <!-- <div class="col-md-6">
-      <h4>Ingredients</h4>
-      <ul>
-        <li *ngFor="let ingredient of recipe.ingredients">{{ingredient}}</li>
-      </ul>
-    </div>
-    <div class="col-md-6">
-      <h4>Directions</h4>
-      <ul>
-        <li *ngFor="let direction of recipe.directions">{{direction}}</li>
-      </ul>
-    </div> -->
-
   </div>
-
-  <!-- <div>id: {{recipe.id}}</div>
-  <div>title: {{recipe.title}}</div>
-  <div>category: {{recipe.category}}</div>
-  <div>cookTime: {{recipe.cookTime}}</div>
-  <div>directions: {{recipe.directions}}</div>
-  <div>imagePath: {{recipe.imagePath}}</div>
-  <div>ingredients: {{recipe.ingredients}}</div>
-  <div>koreanTitle: {{recipe.koreanTitle}}</div>
-  <div>prepTime: {{recipe.prepTime}}</div> -->
-</li>
+</li> -->

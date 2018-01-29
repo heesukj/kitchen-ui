@@ -1,7 +1,4 @@
 /* You can add global styles to this file, and also import other style files */
-.header-backgroud {
-  background-color: #e3f2fd
-}
 
 .food-image {
   width: 52%;
@@ -25,9 +22,7 @@
     flex: 1 100%;
 }
 
-.log-in-button {
-  margin-right: 7px;
-}
+
 
 .clickable {
   cursor:pointer;

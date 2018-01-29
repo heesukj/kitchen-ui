@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-page-title',
@@ -7,9 +8,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PageTitleComponent implements OnInit {
 
-  constructor() { }
+  router: Router;
+
+  constructor(_router: Router) {
+    this.router = _router;
+  }
 
   ngOnInit() {
+  }
+
+  onSearchClick(searchInput: string) {
+    console.log('onSearchClick, searchInput', searchInput);
+    this.router.navigateByUrl('recipe-list-page?title=' + searchInput);
   }
 
 }
