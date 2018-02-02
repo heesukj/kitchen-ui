@@ -21,6 +21,7 @@ import { IngredientsComponent } from './ingredients/ingredients.component';
 import { ContactComponent } from './contact/contact.component';
 import { AboutComponent } from './about/about.component';
 import { SideDishesComponent } from './side-dishes/side-dishes.component';
+import { PrepMethodsComponent } from './prep-methods/prep-methods.component';
 
 @NgModule({
   declarations: [
@@ -38,6 +39,7 @@ import { SideDishesComponent } from './side-dishes/side-dishes.component';
     ContactComponent,
     AboutComponent,
     SideDishesComponent,
+    PrepMethodsComponent,
   ],
   imports: [
     BrowserModule,
