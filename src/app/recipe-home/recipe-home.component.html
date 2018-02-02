@@ -37,10 +37,10 @@
     <div class="row">
       <div class="col-lg-4">
         <h5 style="text-align:left;margin-top:5px">
-          <i class="fa fa fa-list" style="margin-right: 6px;"aria-hidden="true"></i> Top Breakfast Recipes
+          <i class="fa fa fa-star" style="margin-right: 6px;"aria-hidden="true"></i> Top Breakfast Recipe
         </h5>
         <div class="box clearfix clickable" (click)="goToRecipeDetail('5a693d40c2e33ffa6b6a7e2d')">
-          <img src="/assets/images/been-sprout-soup.png" alt>
+          <img src="/assets/images/bean-sprout-soup.png" alt>
           <p style="font-size: 19px;color:#222222;margin-bottom:5px;">Bean Sprout Soup</p>
           <p>콩나물국</p>
           <p>Kong-na-mul-guk</p>
@@ -48,10 +48,10 @@
       </div>
       <div class="col-lg-4">
         <h5 style="text-align:left;margin-top:5px">
-          <i class="fa fa fa-list" style="margin-right: 6px;"aria-hidden="true"></i> Top Lunch Recipes
+          <i class="fa fa fa-star" style="margin-right: 6px;"aria-hidden="true"></i> Top Lunch Recipe
         </h5>
         <div class="box clearfix clickable" (click)="goToRecipeDetail('5a6962a7c2e33ffa6b6a7e2e')">
-          <img src="/assets/images/bibimbap1.png" alt>
+          <img src="/assets/images/bibimbap.png" alt>
           <p style="font-size: 19px;color:#222222;margin-bottom:5px;">Bibimbap</p>
           <p>비빔밥</p>
           <p>Bi-bim-bap</p>
@@ -59,7 +59,7 @@
       </div>
       <div class="col-lg-4">
         <h5 style="text-align:left;margin-top:5px">
-          <i class="fa fa fa-list" style="margin-right: 6px;"aria-hidden="true"></i> Top Dinner Recipes
+          <i class="fa fa fa-star" style="margin-right: 6px;"aria-hidden="true"></i> Top Dinner Recipe
         </h5>
         <div class="box clearfix clickable" (click)="goToRecipeDetail('5a696af4c2e33ffa6b6a7e2f')">
           <img src="/assets/images/jaeuokbokkm.png" alt>
@@ -82,7 +82,7 @@
       <div class="col-lg-4 clickable" (click)="goToRecipeDetail('5a697105c2e33ffa6b6a7e30')">
         <div class="box grid recipes">
           <div class="in">
-            <i class="fa fa-star" style="margin-right:3px;"aria-hidden="true"></i>  Japchae 잡채
+            <i class="fa fa-heart" style="margin-right:3px;"aria-hidden="true"></i>  Japchae 잡채
           </div>
           <img width="100%" height="210"style="margin-bottom:0;background-color:#F7FCFC;padding:0px 0px;" src="/assets/images/japchae.png" alt>
           <div style="padding:20px;">
@@ -97,7 +97,7 @@
       <div class="col-lg-4 clickable" (click)="goToRecipeDetail('5a6a129bc2e33ffa6b6a7e32')">
         <div class="box grid recipes">
           <div class="in">
-            <i class="fa fa-star" style="margin-right:3px;"aria-hidden="true"></i>  Haemul Pajeon 해물파전
+            <i class="fa fa-heart" style="margin-right:3px;"aria-hidden="true"></i>  Haemul Pajeon 해물파전
           </div>
           <img width="100%" height="210"style="margin-bottom:0;background-color:#F7FCFC;padding:0px 0px;" src="/assets/images/pajeon.png" alt>
           <div style="padding:20px;">
@@ -112,7 +112,7 @@
       <div class="col-lg-4 clickable" (click)="goToRecipeDetail('5a6a2c00c2e33ffa6b6a7e33')">
         <div class="box grid recipes">
           <div class="in">
-            <i class="fa fa-star" style="margin-right:3px;"aria-hidden="true"></i>  Bulgogi 불고기
+            <i class="fa fa-heart" style="margin-right:3px;"aria-hidden="true"></i>  Bulgogi 불고기
           </div>
           <img width="100%" height="210"style="margin-bottom:0;background-color:#F7FCFC;padding:0px 0px;" src="/assets/images/bulgogi.png" alt>
           <div style="padding:20px;">
@@ -135,25 +135,25 @@
       <div class="col-lg-12 title-text-list">
         <h5><i class="fa fa-info-circle" style="color:grey;margin-right:7px;" aria-hidden="true"></i> Korean Cuisine</h5>
       </div>
-      <div class="col-lg-4 clickable" (click)="goToRecipeDetail()">
+      <div class="col-lg-4 clickable" routerLink="/ingredients">
         <div class="box grid recipes">
           <div class="in">
             <i class="fa fa-cogs" style="margin-right:3px;"aria-hidden="true"></i>  Ingredients
           </div>
           <img width="100%" height="210"style="margin-bottom:0;background-color:#F7FCFC;padding:0px 0px;" src="/assets/images/ingredients.png" alt>
           <div style="padding:20px;">
-            <p><strong>Over 25 essential Korean cooking ingredients: </strong>Rice & Noodles, Vegetables, Fish & Seafood, Shellfish, Meat, Condiments, Spices, etc </p>
+            <p><strong>Over 20 essential Korean cooking ingredients: </strong>Rice & Noodles, Vegetables, Fish & Seafood, Shellfish, Meat, Condiments, Spices, etc </p>
           </div>
         </div>
       </div>
-      <div class="col-lg-4 clickable" (click)="goToRecipeDetail()">
+      <div class="col-lg-4 clickable" routerLink="/side-dishes">
         <div class="box grid recipes">
           <div class="in">
-            <i class="fa fa-heart" style="margin-right:3px;"aria-hidden="true"></i>  Tastes
+            <i class="fa fa-heart" style="margin-right:3px;"aria-hidden="true"></i>  Side Dishes
           </div>
           <img width="100%" height="210"style="margin-bottom:0;background-color:#F7FCFC;padding:0px 0px;" src="/assets/images/daily-meal.png" alt>
           <div style="padding:20px;">
-            <p><strong>Traditional Korean meals </strong>are noted for the number of side dishes that accompany steam-cooked short-grain rice and Kimchi nearly every meal.</p>
+            <p><strong>Banchan from Korean: 반찬;</strong> refers to small side dishes of food served along with cooked rice and main dish in Korean cuisine.</p>
           </div>
         </div>
       </div>

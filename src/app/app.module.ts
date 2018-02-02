@@ -17,6 +17,10 @@ import { RecipeListPageComponent } from './recipe-list-page/recipe-list-page.com
 // import { LogInFormComponent } from './log-in-form/log-in-form.component';
 import { RecipeHomeComponent } from './recipe-home/recipe-home.component';
 import { FooterComponent } from './footer/footer.component';
+import { IngredientsComponent } from './ingredients/ingredients.component';
+import { ContactComponent } from './contact/contact.component';
+import { AboutComponent } from './about/about.component';
+import { SideDishesComponent } from './side-dishes/side-dishes.component';
 
 @NgModule({
   declarations: [
@@ -30,6 +34,10 @@ import { FooterComponent } from './footer/footer.component';
     // LogInFormComponent,
     RecipeHomeComponent,
     FooterComponent,
+    IngredientsComponent,
+    ContactComponent,
+    AboutComponent,
+    SideDishesComponent,
   ],
   imports: [
     BrowserModule,
