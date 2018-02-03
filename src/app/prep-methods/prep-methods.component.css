@@ -1,0 +1,186 @@
+.para {
+  margin-left:15px;
+  margin-top:10px;
+  letter-spacing:.07rem;
+  padding-bottom: 20px;
+}
+
+.subtitle {
+  text-transform: uppercase;
+  letter-spacing: .05rem;
+  font-weight: bold;
+  text-align: left;
+  color: #545455;
+  margin-top: 20px;
+  margin-bottom: -12px;
+}
+
+.subt {
+  text-transform: uppercase;
+  letter-spacing: .05rem;
+  font-weight: bold;
+  text-align: left;
+  color: #545455;
+  margin-top: -15px;
+  margin-bottom: -2px;
+}
+
+.box grid recipes {
+
+}
+.title-text-list {
+  text-transform: uppercase;
+  letter-spacing: .05rem;
+  margin-top: 30px;
+  border-bottom-color: rgb(222, 222, 222);
+  font-size: 20px;
+  font-weight: bold;
+  text-align: left;
+  text-shadow: 1px 1px 2px white, 0 0 25px darkgrey, 0 0 15px lightgrey;
+}
+.img {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.box.grid.recipes img{
+    margin-bottom: 40px;
+    padding-bottom: 30px;
+    text-align: center;
+    border: 1px solid #dedede;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.box.grid.recipes, .top .box {
+
+    background-color: #fff;
+    box-shadow: 0 6px 15px rgba(36,37,38,.08);
+}
+.list {
+    margin-top: 30px;
+}
+.recipe-text-margin {
+  font-weight: 500;
+  margin-top: 38px;
+}
+.col-margin {
+  margin-left: 28px;
+}
+.img-border {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.div-container {
+  padding: 10px;
+}
+.list h5 {
+    margin-bottom: 30px;
+}
+.h5, h5 {
+  font-size: 1.25rem;
+}
+
+/* h1, h2, h3, h4, h5, h6 {
+    margin-top: 0;
+    margin-bottom: .5rem;
+} */
+
+/* .box.list.recipes .in {
+    margin-bottom: 10px;
+    padding: 10px 15px;
+    letter-spacing: .07rem;
+    padding-top: 10px;
+    padding-right: 15px;
+    padding-bottom: 10px;
+    padding-left: 15px;
+    text-align: left;
+    color: #fff;
+    background-color: #4C5151;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+} */
+.box.list.recipes h2 {
+    font-size: 1.2rem;
+    padding-left: 140px;
+}
+
+.row {
+    /* display: -ms-flexbox; */
+    display: flex;
+    /* -ms-flex-wrap: wrap; */
+    flex-wrap: wrap;
+    margin-right: -15px;
+    margin-left: -15px;
+}
+.box.list.recipes .tag a {
+    display: inline-block;
+    padding: 3px 15px;
+    color: #808080;
+    border: 1px solid #dedede;
+    border-radius: 40px;
+}
+h5 {
+  margin-top: 15px;
+  margin-left: 32px;
+  font-size: 16px;
+  font-weight: bold;
+  color: #2F2F2F;
+}
+.box.list.recipes {
+    margin-top: 0;
+    /* margin-bottom: 30px; */
+    padding-bottom: 10px;
+    border: 1px solid #dedede;
+    border-top-color: rgb(222, 222, 222);
+    border-top-style: solid;
+    border-top-width: 1px;
+    border-right-color: rgb(222, 222, 222);
+    border-right-style: solid;
+    border-right-width: 1px;
+    border-bottom-color: rgb(222, 222, 222);
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+    border-left-color: rgb(222, 222, 222);
+    border-left-style: solid;
+    border-left-width: 1px;
+    border-image-source: initial;
+    border-image-slice: initial;
+    border-image-width: initial;
+    border-image-outset: initial;
+    border-image-repeat: initial;
+    background-color: #fff;
+    box-shadow: 0 3px 8px 0 rgba(0, 0, 0, 0.5), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.box.list.recipes p{
+  text-align:center;
+  padding:0 10px 0 10px;
+  padding-bottom:25px;
+  /* font-size:10px; */
+}
+
+.box.grid.recipes .in {
+    padding: 10px 15px;
+    text-align: left;
+    letter-spacing: .08rem;
+    color: #fff;
+    background-color: #e13b2b;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+h2 {
+    display: block;
+    font-size: 1.5em;
+    -webkit-margin-before: 0.83em;
+    -webkit-margin-after: 0.83em;
+    -webkit-margin-start: 0px;
+    -webkit-margin-end: 0px;
+    font-weight: bold;
+}
+a {
+  padding: 0px 3px 27px 0px;
+  color: black;
+  font-size: 20px;
+  background-color: transparent;
+  }
+
+.col-lg-12 {
+    -ms-flex: 0 0 100%;
+    flex: 0 0 100%;
+    max-width: 100%;
+}
