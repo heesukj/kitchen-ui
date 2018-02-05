@@ -10,7 +10,7 @@
           <h6 class="kortitle">{{recipe.koreanTitle}}
             <span *ngIf='recipe.koreanTitlePron' class="kortitle">{{'(' + recipe.koreanTitlePron + ') '}}</span>
           </h6>
-          <h2 style="margin-bottom:10px;">{{recipe.title}}</h2>
+          <h2 style="margin-bottom:12px;font-size:25px;font-weight:500">{{recipe.title}}</h2>
           <a href="#" class="btn btn-default btn-text-size">
             <i class="fa fa-download" aria-hidden="true"></i>
           </a>
@@ -26,31 +26,31 @@
         </div>
       </div>
 
-  <!-- Image with time  -->
+  <!-- Image with tags  -->
       <div class="col-md-8 offset-md-2">
         <img src="{{recipe.imagePath}}" alt>
         <div class="info">
           <div class="row">
             <div class="col-md-6">
-              <p><i class="fa fa-clock-o" style="margin-bottom:5px;font-size:16px;margin-right:5px;"aria-hidden="true"></i>Total Time: <strong>{{recipe.totalTime}}</strong></p>
-              <p><i class="fa fa-clock-o" style="margin-bottom:5px;font-size:16px;margin-right:5px;"aria-hidden="true"></i>Prep Time: <strong>{{recipe.prepTime}}</strong></p>
-              <p><i class="fa fa-clock-o" style="font-size:16px;margin-right:5px;"aria-hidden="true"></i>Cook Time: <strong>{{recipe.cookTime}}</strong></p>
+              <p><i class="fa fa-clock-o" style="margin-bottom:5px;font-size:14px;margin-right:5px;"aria-hidden="true"></i>Total Time: <strong>{{recipe.totalTime}}</strong></p>
+              <p><i class="fa fa-clock-o" style="margin-bottom:5px;font-size:14px;margin-right:5px;"aria-hidden="true"></i>Prep Time: <strong>{{recipe.prepTime}}</strong></p>
+              <p><i class="fa fa-clock-o" style="font-size:14px;margin-right:5px;"aria-hidden="true"></i>Cook Time: <strong>{{recipe.cookTime}}</strong></p>
             </div>
             <div class="col-md-6">
-              <p><i class="fa fa-users" style="margin-bottom:5px;font-size:16px;margin-right:5px;"aria-hidden="true"></i>Yield: <strong>{{recipe.yield}}</strong></p>
-              <p><i class="fa fa-hand-pointer-o" style="margin-bottom:5px;font-size:16px;margin-right:5px;"aria-hidden="true"></i>Level: <strong>{{recipe.level}}</strong></p>
-              <p><i class="fa fa-check-square-o" style="font-size:16px;margin-right:5px;"aria-hidden="true"></i>Calories Per Serving: <strong>{{recipe.caloriesPerServing}}</strong></p>
+              <p><i class="fa fa-users" style="margin-bottom:5px;font-size:14px;margin-right:5px;"aria-hidden="true"></i>Yield: <strong>{{recipe.yield}}</strong></p>
+              <p><i class="fa fa-hand-pointer-o" style="margin-bottom:5px;font-size:14px;margin-right:5px;"aria-hidden="true"></i>Level: <strong>{{recipe.level}}</strong></p>
+              <p><i class="fa fa-check-square-o" style="font-size:14px;margin-right:5px;"aria-hidden="true"></i>Calories Per Serving: <strong>{{recipe.caloriesPerServing}}</strong></p>
             </div>
           </div>
         </div>
       </div>
       <div class="col-lg-8 offset-lg-2">
-        <p  style="margin-bottom:50px;">{{recipe.description}}</p>
+        <p  style="margin-bottom:50px;font-size:14px">{{recipe.description}}</p>
         <div class="row">
           <div class="col-lg-6">
-            <h4 style="margin-bottom:20px;font-size:17px">Ingredients</h4>
+            <h4 style="margin-bottom:20px;font-size:15px">Ingredients</h4>
             <div>
-              <ul class="ingredients">
+              <ul class="ingredients" style="font-size:14px">
                 <li *ngFor="let ingredient of recipe.ingredients">
                   {{ingredient}}
                 </li>
@@ -58,9 +58,9 @@
             </div>
           </div>
           <div class="col-lg-6">
-            <h4 style="margin-bottom:20px;font-size:17px">Directions</h4>
+            <h4 style="margin-bottom:20px;font-size:15px">Directions</h4>
             <div>
-              <ul class="directions">
+              <ul class="directions" style="font-size:14px">
                 <li *ngFor="let direction of recipe.directions">
                   {{direction}}
                 </li>
@@ -71,9 +71,7 @@
       </div>
     </div>
   </div>
-  <!-- <ngb-rating [(rate)]="currentRate"></ngb-rating>
-  <hr>
-  <pre>Rate: <b>{{currentRate}}</b></pre>
+
 
 
 

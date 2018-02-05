@@ -1,7 +1,13 @@
 .text-style {
   text-align: center;
   letter-spacing: 1.5px;
+  font-size: 25px;
+  font-style: bold;
+  font-weight: 550;
 
+}
+.title-text-list {
+  font-size: 10px;
 }
 
 .img {
@@ -20,6 +26,7 @@
 }
 
 .box.grid.recipes .in {
+    font-size: 14px;
     padding: 10px 15px;
     text-align: left;
     letter-spacing: .08rem;
@@ -52,6 +59,7 @@ img {
 }
 .box.grid.recipes .tag a {
     display: inline-block;
+    font-size: 13px;
     padding: 3px 15px;
     margin-bottom:-10px;
     color: #B0AEAD;

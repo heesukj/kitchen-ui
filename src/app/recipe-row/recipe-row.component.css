@@ -49,21 +49,17 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .box.list.recipes .in {
+    font-size: 14px;
     margin-bottom: 10px;
-    padding: 10px 15px;
     letter-spacing: .07rem;
-    padding-top: 10px;
+    padding-top: 6px;
     padding-right: 15px;
-    padding-bottom: 10px;
+    padding-bottom: 7px;
     padding-left: 15px;
     text-align: left;
     color: #fff;
     background-color: #4C5151;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-}
-.box.list.recipes h2 {
-    font-size: 1.2rem;
-    padding-left: 140px;
 }
 
 .row {
@@ -75,6 +71,7 @@ h1, h2, h3, h4, h5, h6 {
     margin-left: -15px;
 }
 .box.list.recipes .tag a {
+    font-size: 13px;
     display: inline-block;
     padding: 3px 15px;
     color: #808080;

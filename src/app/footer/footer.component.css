@@ -27,7 +27,7 @@ li {
     text-align: -webkit-match-parent;
 }
 .copyright {
-    font-size: 1rem;
+    font-size: 13px;
     padding-top: 19px;
     background-color: #212121;
     letter-spacing: .05rem;
@@ -41,17 +41,22 @@ li {
   display:block;
   text-align: right;
   margin: 0 600px;
-}.media-item {
-  display:inline-block;
+}
+.media-item[_ngcontent-c2] {
+  display: inline-block;
   text-align: right;
-  font-size: 23px;
-  margin-right: 3px;
-  padding-left: -100px;
-  margin-bottom: 37px;
-  padding-top:40px;
-  height:30px;
-  width:30px!important;
+  font-size: 21px;
+  margin-right: 5px;
+  margin-left: -2px;
+  margin-bottom: 15px;
+  padding-top: 35px;
+  height: 30px;
+  width: 30px!important;
 }
 .media-item a{
   color: #22CEBA;
+}
+
+a {
+  letter-spacing: .05rem;
 }
