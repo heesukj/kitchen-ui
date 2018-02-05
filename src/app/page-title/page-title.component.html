@@ -1,6 +1,6 @@
 
 <div class="container" style="height: 71px">
-    <nav class="navbar fixed-top navbar-expand-lg header-backgroud">
+    <nav class="navbar fixed-top navbar-expand-lg navbar-light header-backgroud">
       <!-- <div class="row">
         <div class="container">
           <div class="float-right">
@@ -14,11 +14,27 @@
         <img width="23px" class="img-margin clickable" routerLink="/recipe-home" src="/assets/images/hk-images/logo-1.png">
         <a class="navbar-brand" href="#"></a>
         <a class="navbar-brand page-title-text" style="color:#e13b2b;"href="#"><strong style="margin-left:-7px">Heesuk's Kitchen</strong></a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
+<!--
+        <div class="pos-f-t">
+          <div class="collapse" id="navbarToggleExternalContent">
+            <div class="bg-dark p-4">
+              <h4 class="text-white">Collapsed content</h4>
+              <span class="text-muted">Toggleable via the navbar brand.</span>
+            </div>
+          </div>
+          <nav class="navbar navbar-dark bg-dark">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+          </nav>
+        </div> -->
 
-        <div class="collapse navbar-collapse justify-center-center" id="navbarSupportedContent">
+
+        <div class="collapse navbar-collapse justify-center-center" id="navbarToggleExternalContent" style>
           <ul class="navbar-nav mr-auto" >
             <li class="nav-item active" >
               <a class="nav-link" style="color:#747574;" href="#">Home <span class="sr-only">(current)</span></a>
@@ -31,7 +47,7 @@
                 <div class="dropdown-menu">
                   <a class="dropdown-item" href="recipe-list-page">All Recipes</a>
                   <a class="dropdown-item" href="recipe-list-page">Categories</a>
-                    <div class="dropdown-menu">
+                    <!-- <div class="dropdown-menu">
                       <button class="dropdown-item">Rice 밥</button>
                       <button class="dropdown-item">Noodle 국수</button>
                       <button class="dropdown-item">Soup 국</button>
@@ -46,7 +62,7 @@
                       <button class="dropdown-item">Side Dish 반찬</button>
                       <button class="dropdown-item">Dessert 후식</button>
                       <button class="dropdown-item">Snack 간식</button>
-                    </div>
+                    </div> -->
                 </div>
 
             </li>
