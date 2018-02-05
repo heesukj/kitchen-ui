@@ -14,9 +14,9 @@ const httpOptions = {
 @Injectable()
 export class RecipeService {
 
-  // private recipesUrl = 'http://kitchen-svc-prod.us-west-2.elasticbeanstalk.com/recipes';
+  private recipesUrl = 'http://kitchen-svc-prod.us-west-2.elasticbeanstalk.com/recipes';
   //http://localhost:8080/
-  private recipesUrl = 'http://localhost:8080/recipes';
+  // private recipesUrl = 'http://localhost:8080/recipes';
 
   constructor(private http: HttpClient) { }
 

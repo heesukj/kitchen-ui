@@ -1,8 +1,9 @@
 .para {
+  font-size: 13.5px;
   margin-left:15px;
   margin-top:10px;
   letter-spacing:.07rem;
-  padding-bottom: 20px;
+  padding-bottom: 50px;
 }
 
 .subtitle {
@@ -14,9 +15,13 @@
   margin-top: 20px;
 }
 
-.box grid recipes {
-
+.box.grid.recipes h6{
+  letter-spacing:.05rem;
+  text-align:center;
+  margin-bottom:10px;
+  font-size:13px;
 }
+
 .title-text-list {
   text-transform: uppercase;
   letter-spacing: .05rem;
@@ -176,10 +181,10 @@ a {
 
 .btn-load {
   margin-top: 25px;
-  padding: 10px 20px;
+  padding: 7px 20px;
   color: #666;
   border: 1px solid #dedede;
   border-radius: 50px;
-  font-size:16px;
+  font-size:12.5px;
   letter-spacing: .05rem;
 }

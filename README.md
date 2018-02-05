@@ -3,6 +3,14 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.6.3.
 
+URL:
+
+http://bit.ly/hskitchen
+
+Full S3 Path:
+http://d2vcjravytgg3m.cloudfront.net/
+<!-- http://heesuks-kitchen.s3-website-us-west-2.amazonaws.com/ -->
+
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
