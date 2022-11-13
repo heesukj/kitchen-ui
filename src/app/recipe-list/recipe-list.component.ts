@@ -29,7 +29,7 @@ export class RecipeListComponent implements OnInit {
   ngOnInit() {
     let title = this.activatedRoute.snapshot.queryParams["title"];
 
-    console.log('title', title);
+    // console.log('title', title);
 
     if (title) {
       this.getRecipesByTitleContains(title);
@@ -41,7 +41,7 @@ export class RecipeListComponent implements OnInit {
 //made REST call 1
   getRecipes(): void {   // Observable.subscribe() => This asynchronous approach will work when the RecipeService requests recipes from the server.
     this.recipeService.getRecipes().subscribe(data => {
-      console.log('in getRecipes, data:', data);
+      // console.log('in getRecipes, data:', data);
       this.recipes = data.recipes;
       this.page = data.page;
     });  // Create a function to retrieve the recipes from the service.
@@ -50,7 +50,7 @@ export class RecipeListComponent implements OnInit {
 //made REST call 2 => retrieve (search) a list of recipes based on title
   getRecipesByTitleContains(title): void {   // Observable.subscribe() => This asynchronous approach will work when the RecipeService requests recipes from the server.
     this.recipeService.getRecipesByTitleContains(title).subscribe(data => {
-    console.log('in getRecipesByTitleContains, data:', data);
+    // console.log('in getRecipesByTitleContains, data:', data);
     this.recipes = data.recipes;
     this.page = data.page;
   });  // Create a function to retrieve the recipes from the service.

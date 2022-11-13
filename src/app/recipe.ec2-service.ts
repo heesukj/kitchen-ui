@@ -1,7 +1,8 @@
 import { Injectable } from '@angular/core';
-import { Observable ,  of } from 'rxjs';
+import { Observable } from 'rxjs/Observable';
+import { of } from 'rxjs/observable/of';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
-import { catchError, map, filter, tap } from 'rxjs/operators'; // Error Handling
+import { catchError, map, tap } from 'rxjs/operators'; // Error Handling
 import { RecipeResponse } from './recipe-response';
 
 import { Recipe } from './recipe';
@@ -13,52 +14,44 @@ const httpOptions = {
 @Injectable()
 export class RecipeService {
 
-  private recipesUrl = 'https://1876xp43nc.execute-api.us-west-1.amazonaws.com/default/recipes'
+  private recipesUrl = 'http://kitchen-svc-prod.us-west-2.elasticbeanstalk.com/recipes';
+  //http://localhost:8080/
+  // private recipesUrl = 'http://localhost:8080/recipes';
 
   constructor(private http: HttpClient) { }
 
   getRecipes(): Observable<any> {
-    // console.log('getRecipes called');
+    console.log('getRecipes called');
     return this.http.get<any>(this.recipesUrl).pipe(
       tap(recipes => this.log('fetched recipes')), // The RecipeService methods will tap into the flow of observable values and send a message (via log()) to the message area at the bottom of the page.
       map(response => {
-        // console.log('in map, response', response);
-        return new RecipeResponse(response.recipes, response.page);
+        console.log('in map, reponse', response);
+        return new RecipeResponse(response._embedded.recipes, response.page);
       }),
       catchError(this.handleError('getRecipes', [] )));
   }
 
   getRecipesByTitleContains(title: string): Observable<any> {
-    // console.log('getRecipesByTitleContains, title: ' + title);
-
-    // TODO: should do this in the lambda
-    const titleFilter = (recipe: Recipe) => {
-      return typeof !!recipe.title && recipe.title.toLowerCase().indexOf(title.toLowerCase()) >= 0;
-    }
-
-    return this.http.get<any>(this.recipesUrl).pipe(
-      tap(recipes => this.log('fetched recipes')), // The RecipeService methods will tap into the flow of observable values and send a message (via log()) to the message area at the bottom of the page.
+    console.log('getRecipesByTitleContains, title: ' + title);
+    const url = this.recipesUrl + '/search/findByTitleIgnoreCaseContaining?title=' + title;
+    return this.http.get<any>(url).pipe(
+      tap(recipes => this.log('fetched recipes filtered by title ' + title)), // The RecipeService methods will tap into the flow of observable values and send a message (via log()) to the message area at the bottom of the page.
       map(response => {
-        // console.log('in map, response', response);
-        if (title) {
-          return new RecipeResponse(response.recipes.filter(titleFilter), response.page);
-        } else {
-          return new RecipeResponse(response.recipes.filter(titleFilter), response.page);
-        }
-        
+        console.log('in map, reponse', response);
+        return new RecipeResponse(response._embedded.recipes, response.page);
       }),
-      catchError(this.handleError('getRecipes', [] )));
+      catchError(this.handleError('getRecipesByTitleContains', [] )));
   }
 
-  // getRecipe(id: string): Observable<Recipe> {
-  //   console.log('id: ' + id);
-  //   const url = this.recipesUrl + '/' + id;
-  //   console.log('url', url);
-  //   return this.http.get<Recipe>(url).pipe(
-  //     tap(_ => this.log('fetched recipe id=${id}')),
-  //      catchError(this.handleError<Recipe>('getRecipe id=${id}'))
-  //    );
-  // }
+  getRecipe(id: string): Observable<Recipe> {
+    console.log('id: ' + id);
+    const url = this.recipesUrl + '/' + id;
+    console.log('url', url);
+    return this.http.get<Recipe>(url).pipe(
+      tap(_ => this.log('fetched recipe id=${id}')),
+       catchError(this.handleError<Recipe>('getRecipe id=${id}'))
+     );
+  }
   // /** PUT: update the recipe on the server */
   //  updateRecipe(recipe: Recipe): Observable<any> {
   //    return this.http.put(this.recipesUrl, recipe, httpOptions).pipe(  //http.put => three params: URL, data to update, options

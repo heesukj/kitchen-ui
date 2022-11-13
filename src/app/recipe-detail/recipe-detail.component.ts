@@ -25,12 +25,15 @@ export class RecipeDetailComponent implements OnInit {
   }
 
   getRecipe(): void {
-    console.log('in getRecipe');
+    // console.log('in getRecipe');
     const id = this.route.snapshot.paramMap.get('id');
-    console.log('in getRecipe, id', id);
-    this.recipeService.getRecipe(id).subscribe(recipe => this.recipe = recipe);
+    // console.log('in getRecipe, id', id);
+    // old way
+    // this.recipeService.getRecipe(id).subscribe(recipe => this.recipe = recipe);
+    // use with lambda
+    this.recipeService.getRecipes().subscribe(recipeRespone => {
+      this.recipe = recipeRespone.recipes.find(recipe => recipe.id === id);
+    });
+
   }
-
-
-
 }

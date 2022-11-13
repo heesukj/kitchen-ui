@@ -17,7 +17,7 @@ export class RecipeRowComponent implements OnInit {
   }
 
   ngOnInit() {
-    console.log('in ngOnInit, recipe', this.recipe);
+    // console.log('in ngOnInit, recipe', this.recipe);
   }
 
   goToRecipeDetail() {
