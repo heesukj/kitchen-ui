@@ -14,7 +14,6 @@ import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './/app-routing.module';
 import { RecipeDetailComponent } from './recipe-detail/recipe-detail.component';
 import { RecipeListPageComponent } from './recipe-list-page/recipe-list-page.component';
-// import { LogInFormComponent } from './log-in-form/log-in-form.component';
 import { RecipeHomeComponent } from './recipe-home/recipe-home.component';
 import { FooterComponent } from './footer/footer.component';
 import { IngredientsComponent } from './ingredients/ingredients.component';
@@ -32,7 +31,6 @@ import { PrepMethodsComponent } from './prep-methods/prep-methods.component';
     RecipeRowComponent,
     RecipeDetailComponent,
     RecipeListPageComponent,
-    // LogInFormComponent,
     RecipeHomeComponent,
     FooterComponent,
     IngredientsComponent,
@@ -43,7 +41,7 @@ import { PrepMethodsComponent } from './prep-methods/prep-methods.component';
   ],
   imports: [
     BrowserModule,
-    NgbModule.forRoot(),
+    NgbModule,
     HttpClientModule,
     AppRoutingModule
   ],
